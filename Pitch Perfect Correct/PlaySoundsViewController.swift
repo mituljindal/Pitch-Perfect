@@ -53,6 +53,16 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
+        // I was not able to access these buttons outside any functions.
+        // Therefore, I applied this in a function that would be definitely called
+        // What is the correct way to do this?
+        slowButton.imageView?.contentMode = .scaleAspectFit
+        fastButton.imageView?.contentMode = .scaleAspectFit
+        lowPitchButton.imageView?.contentMode = .scaleAspectFit
+        highPitchButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.imageView?.contentMode = .scaleAspectFit
+        stopButton.imageView?.contentMode = .scaleAspectFit
     }
     
     override func viewWillAppear(_ animated: Bool) {
